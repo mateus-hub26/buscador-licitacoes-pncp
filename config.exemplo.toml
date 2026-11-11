@@ -1,0 +1,40 @@
+# Copie este arquivo para config.toml e ajuste os filtros.
+
+[busca]
+# A licitação entra se o objeto tiver PELO MENOS UMA destas palavras
+# (sem diferenciar acentos ou maiúsculas; casa a palavra inteira).
+palavras_chave = [
+    "construção",
+    "reforma",
+    "ampliação",
+    "obra",
+    "engenharia",
+    "edificação",
+]
+
+# Descarta se o objeto tiver qualquer um destes termos.
+excluir = [
+    "material de expediente",
+    "gêneros alimentícios",
+    "locação de veículos",
+]
+
+# Siglas das UFs de interesse. Lista vazia = Brasil inteiro.
+ufs = ["SP", "MG", "RJ"]
+
+# Faixa de valor estimado (R$). Licitações sem valor informado não são descartadas.
+valor_min = 100_000
+valor_max = 20_000_000
+
+# Códigos de modalidade do PNCP:
+# 4 = Concorrência Eletrônica, 5 = Concorrência Presencial,
+# 6 = Pregão Eletrônico, 7 = Pregão Presencial, 8 = Dispensa.
+modalidades = [4, 5, 6]
+
+# Busca propostas que encerram nos próximos N dias.
+# Quanto maior o horizonte, mais páginas para baixar (a API limita a taxa de requisições).
+horizonte_dias = 30
+
+[email]
+# Usado só com a opção --email. Credenciais SMTP ficam em variáveis de ambiente.
+destinatarios = []

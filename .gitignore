@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# configuração local e resultados gerados
+config.toml
+resultados/
+*.xlsx
+.env
